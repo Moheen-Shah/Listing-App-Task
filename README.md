@@ -35,3 +35,13 @@ Added Google Maps link to easily view user locations.
 
 # Nationality Flag Display:
 Integrated Rest Countries API to display nationality flags.
+
+## Running the Project Locally
+
+To run the project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/Moheen-Shah/Listing-App-Task.git
+   cd Listing-App-Task

@@ -1,3 +1,5 @@
+# User Listing App
+
 This ReactJS application fetches user data from the 'https://randomuser.me/api/' API and implements various features as per the provided requirements.
 
 ## Project Overview
@@ -5,7 +7,7 @@ This ReactJS application fetches user data from the 'https://randomuser.me/api/'
 The project includes the following functionalities:
 
 1. **Listing Component with Pagination and Filters**
-   - Created a listing component that displays user data fetched from the API.
+   - Created a modular listing component that displays user data fetched from the API.
    - Implemented pagination for better user experience.
    - Added gender filters that persist when navigating through pages.
 
@@ -23,7 +25,10 @@ The project includes the following functionalities:
 
 The project has the following structure:
 
-- **src/components/UserList.js**: Listing component with pagination, filters, and search functionality.
+- **src/components/UserList.js**: Main listing component that integrates other reusable components.
+  - **src/components/GenderFilter.js**: Gender filter component.
+  - **src/components/SearchInput.js**: Search input component.
+  - **src/components/UserProfileCard.js**: User profile card component.
 - **src/components/UserProfile.js**: Public profile page with user details and additional features.
 - **src/App.js**: Main application component handling routing.
 - **src/index.js**: Entry point of the application.
@@ -36,6 +41,27 @@ Added Google Maps link to easily view user locations.
 # Nationality Flag Display:
 Integrated Rest Countries API to display nationality flags.
 
+**Usage**
+1. The main page (/) displays a user listing with pagination, gender filters, and a search bar.
+2. Click on a user's profile to view detailed information on the public profile page (/profile/:userId).
+3. The public profile page includes a Google Maps link and displays the user's nationality flag.
+
+**Reusable Components:**
+
+The code is structured with reusable components for better maintainability.
+Components such as GenderFilter, SearchInput, and UserProfileCard promote modularity and code reusability.
+# React Router:
+
+Utilized react-router-dom for handling navigation and routing in the application.
+The main routing is defined in App.js.
+# Styling:
+
+Styling is done using Tailwind CSS for a clean and responsive design.
+# API Integration:
+
+Utilized the 'https://randomuser.me/api/' API for fetching user data.
+Integrated the Rest Countries API for displaying nationality flags.
+
 ## Running the Project Locally
 
 To run the project locally, follow these steps:
@@ -45,3 +71,8 @@ To run the project locally, follow these steps:
    ```bash
    git clone https://github.com/Moheen-Shah/Listing-App-Task.git
    cd Listing-App-Task
+# Install Dependencies:
+npm install
+
+# Run the Application:
+npm start
